@@ -60,10 +60,6 @@ def movies_details():
       mov=d["data"]["movie"]
       return render_template("movies_details.html", md = mov)
      
-@app.route('/test', methods=['GET'])
-def index():
-    return render_template("test.html", data=movie_details.process() ,action=movie_details.action(), comedy=movie_details.comedy(), adventure=movie_details.adventure(), animation=movie_details.animation(), horror=movie_details.horror(), romantic=movie_details.romantic())
-
 
 
 if __name__ == '__main__':
