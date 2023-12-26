@@ -79,7 +79,7 @@
             {% for item in search1 %}
             <div class=" col-5 col-md-2  col-xs-6 col-sm-6  p-2 mr-xs-n2 ">
                 <div class="box float-center">
-                    <div class="box-img text-center"><img src="{{ item['large_cover_image'] }}" style="height:250px;" alt="Movie Name"></div>
+                    <div class="box-img text-center"><img src="{{ burl }}{{ item['large_cover_image'] }}" style="height:250px;" alt="Movie Name"></div>
                     <div class="box-content">
                         <span> <h6 class="title mt-md-n5 ml-md-n3 mt-sm-n2 mt-xs-n2" style="font-size: small;"> {{ item['title'] }}<br> ({{ item['year'] }})</h6></span> {% for item in item['torrents'] %} {%if item['quality']=="720p" or item['quality']=="1080p"%}
                         <a class="btn-lg btn-download ml-n2 pr-5rem  mt-n5 float-center" type="button" role="button" href="{{item['url']}}" download><i class="fa fa-download"></i></a>{%endif %} {%endfor%}

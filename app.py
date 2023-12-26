@@ -16,20 +16,20 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template("index.html", data=movie_details.process() ,action=movie_details.action(), comedy=movie_details.comedy(), adventure=movie_details.adventure(), animation=movie_details.animation(), horror=movie_details.horror(), romantic=movie_details.romantic())
+    return render_template("index.html", data=movie_details.process() ,action=movie_details.action(), comedy=movie_details.comedy(), adventure=movie_details.adventure(), animation=movie_details.animation(), horror=movie_details.horror(), romantic=movie_details.romantic(),burl='https://www.yts.nz')
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
    if request.method == 'POST':
       query_term = request.form['search-bar']
       limit=50
-      api='https://yts.unblockit.app/api/v2/list_movies.json?'
+      api='https://www.yts.nz/api/v2/list_movies.json?'
       url=api + urllib.parse.urlencode({'query_term': query_term , 'limit': limit})
       data=requests.get(url).json()
       movie_found=data["data"]["movie_count"]
       if movie_found!=0:
           data2=data["data"]["movies"]
-          return render_template("search.html", search1 = data2, mf= movie_found)
+          return render_template("search.html", search1 = data2, mf= movie_found, burl='https://www.yts.nz')
       else:
           return render_template("notfound1.html")
 
@@ -40,13 +40,13 @@ def filter():
       genre=request.form['genre']
       sort_by=request.form['sort_by']
       limit=50
-      api='https://yts.unblockit.app/api/v2/list_movies.json?'
+      api='https://www.yts.nz/api/v2/list_movies.json?'
       url=api + urllib.parse.urlencode({ 'minimum_rating': rating , 'genre': genre ,'limit': limit ,'sort_by': sort_by})
       data=requests.get(url).json()
       movie_found=data["data"]["movie_count"]
       if movie_found!=0:
           data2=data["data"]["movies"]
-          return render_template("filter.html", search1 = data2, mf= movie_found)
+          return render_template("filter.html", search1 = data2, mf= movie_found, burl='https://www.yts.nz')
       else:
           return render_template("notfound.html")
 
@@ -55,11 +55,11 @@ def filter():
 def movies_details():
    if request.method == 'POST':
       movid=request.form['mid']
-      api='https://yts.unblockit.app/api/v2/movie_details.json?'
+      api='https://www.yts.nz/api/v2/movie_details.json?'
       url=api + urllib.parse.urlencode({ 'movie_id': movid })
       d=requests.get(url).json()
       mov=d["data"]["movie"]
-      return render_template("movies_details.html", md = mov)
+      return render_template("movies_details.html", md = mov, burl='https://www.yts.nz')
      
 
 

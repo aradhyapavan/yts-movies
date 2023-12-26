@@ -77,7 +77,7 @@
 
 
                     <div class="view view-cascade overlay">
-                        <img class="card-img-top " src="{{md['large_cover_image']}}" style=" height:450px;" alt="Card image cap">
+                        <img class="card-img-top " src="{{ burl }}{{md['large_cover_image']}}" style=" height:450px;" alt="Card image cap">
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -87,13 +87,13 @@
                     <div class="card-body card-body-cascade text-center">
 
 
-                        <h4 class="card-title"><strong>{{md['title_long']}} </strong></h4>
+                        <h4 class="card-title"><strong>{{ md['title_long'] }} </strong></h4>
 
-                        <h6 class="font-weight-bold indigo-text py-2">{%for item in md['genres']%} {{item}}{%endfor%}</h6>
-                        <h6 class="font-weight-bold indigo-text py-2">Duration: {{md['runtime']}} Minutes</h6>
+                        <h6 class="font-weight-bold indigo-text py-2">{% for item in md['genres'] %} {{item}} {% endfor %}</h6>
+                        <h6 class="font-weight-bold indigo-text py-2">Duration: {{md['runtime']}} Minutes </h6>
                         <p class="card-title text-center"> Movie Description</p>
 
-                        <p class="card-text">{{md['description_full']}}
+                        <p class="card-text">"{{md['description_full']}}"
                         </p>
 
                     </div>
