@@ -4,7 +4,7 @@ from flask import json
 
 def get_data():
     import http.client
-    conn = http.client.HTTPSConnection("yts.unblockit.lat")
+    conn = http.client.HTTPSConnection("www.yts.nz")
     conn.request("GET", "/api/v2/list_movies.json?limit=10")
     res = conn.getresponse()
     data = res.read()
