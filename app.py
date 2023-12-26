@@ -23,7 +23,7 @@ def search():
    if request.method == 'POST':
       query_term = request.form['search-bar']
       limit=50
-      api='https://www.yts.nz/api/v2/list_movies.json?'
+      api='https://yts.unblockit.app/api/v2/list_movies.json?'
       url=api + urllib.parse.urlencode({'query_term': query_term , 'limit': limit})
       data=requests.get(url).json()
       movie_found=data["data"]["movie_count"]
@@ -40,7 +40,7 @@ def filter():
       genre=request.form['genre']
       sort_by=request.form['sort_by']
       limit=50
-      api='https://www.yts.nz/api/v2/list_movies.json?'
+      api='https://yts.unblockit.app/api/v2/list_movies.json?'
       url=api + urllib.parse.urlencode({ 'minimum_rating': rating , 'genre': genre ,'limit': limit ,'sort_by': sort_by})
       data=requests.get(url).json()
       movie_found=data["data"]["movie_count"]
@@ -55,7 +55,7 @@ def filter():
 def movies_details():
    if request.method == 'POST':
       movid=request.form['mid']
-      api='https://www.yts.nz/api/v2/movie_details.json?'
+      api='https://yts.unblockit.app/api/v2/movie_details.json?'
       url=api + urllib.parse.urlencode({ 'movie_id': movid })
       d=requests.get(url).json()
       mov=d["data"]["movie"]
