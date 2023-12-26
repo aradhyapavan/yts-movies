@@ -4,7 +4,7 @@ from flask import json
 
 def get_data():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?limit=50&sort_by=rating")
     res = conn.getresponse()
     data = res.read()
@@ -18,7 +18,7 @@ def process():
 
 def get_action_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=action&limit=50&minimum_rating=8&sort_by=year")
     res = conn.getresponse()
     action = res.read()
@@ -33,7 +33,7 @@ def action():
 
 def get_comedy_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=comedy&limit=50&minimum_rating=8&sort_by=year")
     res = conn.getresponse()
     data = res.read()
@@ -48,7 +48,7 @@ def comedy():
 
 def get_horror_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=horror&limit=50&minimum_rating=7&sort_by=year")
     res = conn.getresponse()
     data = res.read()
@@ -64,7 +64,7 @@ def horror():
 
 def get_animation_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=animation&sort_by=year&minimum_rating=8&limit=50")
     res = conn.getresponse()
     data = res.read()
@@ -82,7 +82,7 @@ def animation():
 
 def get_adventure_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=adventure&sort_by=year&minimum_rating=8&limit=50")
     res = conn.getresponse()
     data = res.read()
@@ -96,7 +96,7 @@ def adventure():
 
 def get_romantic_movies():
     import http.client
-    conn = http.client.HTTPSConnection("www.yts.nz")
+    conn = http.client.HTTPSConnection("yts.unblockit.app")
     conn.request("GET", "/api/v2/list_movies.json?genre=romance&sort_by=year&minimum_rating=8&limit=50")
     res = conn.getresponse()
     data = res.read()
