@@ -72,8 +72,6 @@
 
 This project is licensed under the MIT License.
 
-## Contact
 
-For questions or feedback, contact [Your Name/Email]
 
 **Enjoy your movie journey!**
