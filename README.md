@@ -51,10 +51,12 @@
 - Search functionality
   
  <img src="image/search.png" height="100px;" width="100%;">
-- Filter and sorting options
+ 
+-  Filter and sorting options
   
  <img src="image/fands.png" height="100px;" width="100%;">
-- Movie details page
+ 
+-  Movie details page
  
  <img src="image/md.png" height="650px;" width="100%;">
 
