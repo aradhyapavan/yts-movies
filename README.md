@@ -4,7 +4,7 @@
 
  <h3>Home Page</h3>
 
-<img src="image/home.png" height="450px;" width="100%;">
+<img src="image/home.png" height="350px;" width="100%;">
 
 ## Features
 
@@ -45,10 +45,14 @@
 
 
 - Curated movie lists
+  <img src="image/curated.png" height="450px;" width="100%;">
 - Search functionality
+- <img src="image/search.png" height="100px;" width="100%;">
 - Filter and sorting options
+- <img src="image/fands.png" height="100px;" width="100%;">
 - Movie details page
-- Download buttons
+- <img src="image/md.png" height="550px;" width="100%;">
+
 
 ## Important Notes
 
