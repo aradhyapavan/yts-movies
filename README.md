@@ -4,7 +4,7 @@
 
  <h3>Home Page</h3>
 
-<img src="image/home.png" height="250px;" width="100%;">
+<img src="image/home.png" height="450px;" width="100%;">
 
 ## Features
 
