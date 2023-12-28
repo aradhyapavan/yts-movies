@@ -66,7 +66,7 @@
 - This application is for educational and personal use only.
 - Download and share content responsibly and legally.
 - Respect copyright laws and regulations.
-- Refer to the YTS API terms and conditions.
+- Refer to the YTS API terms and conditions her <a href="https://www.yts.nz/api/">Yts Website</a>
 
 
 
